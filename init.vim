@@ -1,18 +1,21 @@
-" Fisa-vim-config
-" http://fisadev.github.io/fisa-vim-config/
-" version: 8.2
+" Fisa-neovim-config
+" http://neovim.fisadev.com
+" version: 9.0beta
+
+" TODO current problems:
+" * end key not working
 
 " ============================================================================
 " Vim-plug initialization
 " Avoid modify this section, unless you are very sure of what you are doing
 
 let vim_plug_just_installed = 0
-let vim_plug_path = expand('~/.vim/autoload/plug.vim')
+let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
 if !filereadable(vim_plug_path)
     echo "Installing Vim-plug..."
     echo ""
-    silent !mkdir -p ~/.vim/autoload
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    silent !mkdir -p ~/.config/nvim/autoload
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     let vim_plug_just_installed = 1
 endif
 
@@ -31,88 +34,100 @@ endif
 " want to use
 call plug#begin('~/.vim/plugged')
 
-" Plugins from github repos:
+" Now the actual plugins:
 
 " Override configs by directory 
 Plug 'arielrossanigo/dir-configs-override.vim'
-" Better file browser
-Plug 'scrooloose/nerdtree'
+
 " Code commenter
 Plug 'scrooloose/nerdcommenter'
+
+" Better file browser
+Plug 'scrooloose/nerdtree'
+
 " Class/module browser
 Plug 'majutsushi/tagbar'
-" Code and files fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
-" Extension to ctrlp, for fuzzy command finder
-Plug 'fisadev/vim-ctrlp-cmdpalette'
-" Zen coding
-Plug 'mattn/emmet-vim'
-" Git integration
-Plug 'motemen/git-vim'
-" Tab list panel
-Plug 'kien/tabman.vim'
+" TODO known problems:
+" * current block not refreshing
+
+" Search results counter
+Plug 'IndexedSearch'
+
+" Terminal Vim with 256 colors colorscheme
+Plug 'fisadev/fisa-vim-colorscheme'
+
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Terminal Vim with 256 colors colorscheme
-Plug 'fisadev/fisa-vim-colorscheme'
-" Consoles as buffers
-Plug 'rosenfeld/conque-term'
+
+" Code and files fuzzy finder
+" Plug 'ctrlpvim/ctrlp.vim'
+" Extension to ctrlp, for fuzzy command finder
+" Plug 'fisadev/vim-ctrlp-cmdpalette'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Pending tasks list
 Plug 'fisadev/FixedTaskList.vim'
+
+" Async autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Completion from other opened files
+Plug 'Shougo/context_filetype.vim'
+" Python autocompletion
+Plug 'zchee/deoplete-jedi'
+
+" Automatically close parenthesis, etc
+Plug 'Townk/vim-autoclose'
+
 " Surround
 Plug 'tpope/vim-surround'
-" Autoclose
-Plug 'Townk/vim-autoclose'
+
 " Indent text object
 Plug 'michaeljsmith/vim-indent-object'
+
 " Indentation based movements
 Plug 'jeetsukumaran/vim-indentwise'
-" Python mode (indentation, doc, refactor, lints, code checking, motion and
-" operators, highlighting, run and ipdb breakpoints)
-Plug 'klen/python-mode'
-" Better autocompletion
-Plug 'Shougo/neocomplcache.vim'
-" Snippets manager (SnipMate), dependencies, and snippets repo
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'honza/vim-snippets'
-Plug 'garbas/vim-snipmate'
-" Git/mercurial/others diff icons on the side of the file lines
-Plug 'mhinz/vim-signify'
-" Automatically sort python imports
-Plug 'fisadev/vim-isort'
-" Drag visual blocks arround
-Plug 'fisadev/dragvisuals.vim'
-" Window chooser
-Plug 't9md/vim-choosewin'
-" Python and other languages code checker
-Plug 'scrooloose/syntastic'
-" Paint css colors with the real color
-Plug 'lilydjwg/colorizer'
+
 " Ack code search (requires ack installed in the system)
 Plug 'mileszs/ack.vim'
-if has('python')
-    " YAPF formatter for Python
-    Plug 'pignacio/vim-yapf-format'
-endif
+" TODO is there a better option for neovim?
+
+" Paint css colors with the real color
+Plug 'lilydjwg/colorizer'
+" TODO is there a better option for neovim?
+
+" Window chooser
+Plug 't9md/vim-choosewin'
+
+" Automatically sort python imports
+Plug 'fisadev/vim-isort'
+
+" Highlight matching html tags
+Plug 'valloric/MatchTagAlways'
+
+" Git integration
+Plug 'tpope/vim-fugitive'
+
+" Git/mercurial/others diff icons on the side of the file lines
+Plug 'mhinz/vim-signify'
+
+" Yank history navigation
+Plug 'YankRing.vim'
+
+" Linters
+Plug 'neomake/neomake'
+" TODO run on save
+" TODO not detecting errors, just style, is it using pylint? 
+
 " Relative numbering of lines (0 is the current line)
 " (disabled by default because is very intrusive and can't be easily toggled
 " on/off. When the plugin is present, will always activate the relative 
 " numbering every time you go to normal mode. Author refuses to add a setting 
 " to avoid that)
-" Plug 'myusuf3/numbers.vim'
+Plug 'myusuf3/numbers.vim'
 
-" Plugins from vim-scripts repos:
 
-" Search results counter
-Plug 'IndexedSearch'
-" XML/HTML tags navigation
-Plug 'matchit.zip'
-" Gvim colorscheme
-Plug 'Wombat'
-" Yank history navigation
-Plug 'YankRing.vim'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -129,38 +144,38 @@ endif
 " Vim settings and mappings
 " You can edit them as you wish
 
-" no vi-compatible
-set nocompatible
-
-" allow plugins by file type (required for plugins!)
-filetype plugin on
-filetype indent on
-
 " tabs and spaces handling
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" tab length exceptions on some file types
-autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
-
-" always show status bar
-set ls=2
-
-" incremental search
-set incsearch
-" highlighted search results
-set hlsearch
-
-" syntax highlight on
-syntax on
-
 " show line numbers
 set nu
 
+" use 256 colors when possible
+if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
+	let &t_Co = 256
+    colorscheme fisa
+else
+    colorscheme delek
+endif
+
+" needed so deoplete can auto select the first suggestion
+set completeopt+=noinsert
+" comment this line to enable autocompletion preview window
+" (displays documentation related to the selected completion option)
+set completeopt-=preview
+
+" TODO maybe remove?
+" autocompletion of files and commands behaves like shell
+" (complete only the common part, list the options that match)
+set wildmode=list:longest
+
+" save as sudo
+ca w!! w !sudo tee "%"
+
+" TODO time to choose and organize
 " tab navigation mappings
 map tn :tabn<CR>
 map tp :tabp<CR>
@@ -171,7 +186,6 @@ map <C-S-Right> :tabn<CR>
 imap <C-S-Right> <ESC>:tabn<CR>
 map <C-S-Left> :tabp<CR>
 imap <C-S-Left> <ESC>:tabp<CR>
-
 " navigate windows with meta+arrows
 map <M-Right> <c-w>l
 map <M-Left> <c-w>h
@@ -182,61 +196,8 @@ imap <M-Left> <ESC><c-w>h
 imap <M-Up> <ESC><c-w>k
 imap <M-Down> <ESC><c-w>j
 
-" old autocomplete keyboard shortcut
-imap <C-J> <C-X><C-O>
-
-" Comment this line to enable autocompletion preview window
-" (displays documentation related to the selected completion option)
-" Disabled by default because preview makes the window flicker
-set completeopt-=preview
-
-" save as sudo
-ca w!! w !sudo tee "%"
-
-" simple recursive grep
-nmap ,r :Ack 
-nmap ,wr :Ack <cword><CR>
-
-" use 256 colors when possible
-if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
-	let &t_Co = 256
-    colorscheme fisa
-else
-    colorscheme delek
-endif
-
-" colors for gvim
-if has('gui_running')
-    colorscheme wombat
-endif
-
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
-
-" autocompletion of files and commands behaves like shell
-" (complete only the common part, list the options that match)
-set wildmode=list:longest
-
-" better backup, swap and undos storage
-set directory=~/.vim/dirs/tmp     " directory to place swap files in
-set backup                        " make backup files
-set backupdir=~/.vim/dirs/backups " where to put backup files
-set undofile                      " persistent undos - undo after you re-open the file
-set undodir=~/.vim/dirs/undos
-set viminfo+=n~/.vim/dirs/viminfo
-" store yankring history file there too
-let g:yankring_history_dir = '~/.vim/dirs/'
-
-" create needed directories if they don't exist
-if !isdirectory(&backupdir)
-    call mkdir(&backupdir, "p")
-endif
-if !isdirectory(&directory)
-    call mkdir(&directory, "p")
-endif
-if !isdirectory(&undodir)
-    call mkdir(&undodir, "p")
-endif
 
 " ============================================================================
 " Plugins settings and mappings
@@ -257,7 +218,6 @@ map <F3> :NERDTreeToggle<CR>
 nmap ,t :NERDTreeFind<CR>
 " don;t show these file types
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
-
 
 " Tasklist ------------------------------
 
@@ -299,78 +259,58 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.pyc$\|\.pyo$',
   \ }
 
-" Syntastic ------------------------------
+" Fzf ------------------------------
 
-" show list of errors and warnings on the current file
-nmap <leader>e :Errors<CR>
-" check also when just opened the file
-let g:syntastic_check_on_open = 1
-" don't put icons on the sign column (it hides the vcs status icons of signify)
-let g:syntastic_enable_signs = 0
-" custom icons (enable them if you use a patched font, and enable the previous 
-" setting)
-"let g:syntastic_error_symbol = '✗'
-"let g:syntastic_warning_symbol = '⚠'
-"let g:syntastic_style_error_symbol = '✗'
-"let g:syntastic_style_warning_symbol = '⚠'
+" file finder mapping
+nmap ,e :Files<CR>
+" tags (symbols) in current file finder mapping
+nmap ,g :BTag<CR>
+" tags (symbols) in all files finder mapping
+nmap ,G :Tag<CR>
+" general code finder in current file mapping
+nmap ,f :BLines<CR>
+" general code finder in all files mapping
+nmap ,F :Lines<CR>
+" commands finder mapping
+nmap ,c :Commands<CR>
+" to be able to call CtrlP with default search text
+"function! CtrlPWithSearchText(search_text, ctrlp_command_end)
+    "execute ':CtrlP' . a:ctrlp_command_end
+    "call feedkeys(a:search_text)
+"endfunction
+" same as previous mappings, but calling with current word as default text
+"nmap ,wg :call CtrlPWithSearchText(expand('<cword>'), 'BufTag')<CR>
+"nmap ,wG :call CtrlPWithSearchText(expand('<cword>'), 'BufTagAll')<CR>
+"nmap ,wf :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
+"nmap ,we :call CtrlPWithSearchText(expand('<cword>'), '')<CR>
+"nmap ,pe :call CtrlPWithSearchText(expand('<cfile>'), '')<CR>
+"nmap ,wm :call CtrlPWithSearchText(expand('<cword>'), 'MRUFiles')<CR>
+"nmap ,wc :call CtrlPWithSearchText(expand('<cword>'), 'CmdPalette')<CR>
 
-" Python-mode ------------------------------
 
-" don't use linter, we use syntastic for that
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_signs = 0
-" don't fold python code on open
-let g:pymode_folding = 0
-" don't load rope by default. Change to 1 to use rope
-let g:pymode_rope = 0
-" open definitions on same window, and custom mappings for definitions and
-" occurrences
-let g:pymode_rope_goto_definition_bind = ',d'
-let g:pymode_rope_goto_definition_cmd = 'e'
-nmap ,D :tab split<CR>:PymodePython rope.goto()<CR>
-nmap ,o :RopeFindOccurrences<CR>
+" Deoplete -----------------------------
 
-" NeoComplCache ------------------------------
+" Use deoplete.
 
-" most of them not documented because I'm not sure how they work
-" (docs aren't good, had to do a lot of trial and error to make 
-" it play nice)
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_ignore_case = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_fuzzy_completion = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_fuzzy_completion_start_length = 1
-let g:neocomplcache_auto_completion_start_length = 1
-let g:neocomplcache_manual_completion_start_length = 1
-let g:neocomplcache_min_keyword_length = 1
-let g:neocomplcache_min_syntax_length = 1
-" complete with workds from any opened file
-let g:neocomplcache_same_filetype_lists = {}
-let g:neocomplcache_same_filetype_lists._ = '_'
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+" complete with words from any opened file
+let g:context_filetype#same_filetypes = {}
+let g:context_filetype#same_filetypes._ = '_'
 
-" TabMan ------------------------------
+" Ack.vim ------------------------------
 
-" mappings to toggle display, and to focus on it
-let g:tabman_toggle = 'tl'
-let g:tabman_focus  = 'tf'
+" mappings
+nmap ,r :Ack 
+nmap ,wr :Ack <cword><CR>
 
-" Autoclose ------------------------------
+" Window Chooser ------------------------------
 
-" Fix to let ESC work as espected with Autoclose plugin
-let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
-
-" DragVisuals ------------------------------
-
-" mappings to move blocks in 4 directions
-vmap <expr> <S-M-LEFT> DVB_Drag('left')
-vmap <expr> <S-M-RIGHT> DVB_Drag('right')
-vmap <expr> <S-M-DOWN> DVB_Drag('down')
-vmap <expr> <S-M-UP> DVB_Drag('up')
-" mapping to duplicate block
-vmap <expr> D DVB_Duplicate()
+" mapping
+nmap  -  <Plug>(choosewin)
+" show big letters
+let g:choosewin_overlay_enable = 1
 
 " Signify ------------------------------
 
@@ -388,12 +328,12 @@ highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 
-" Window Chooser ------------------------------
+" Autoclose ------------------------------
 
-" mapping
-nmap  -  <Plug>(choosewin)
-" show big letters
-let g:choosewin_overlay_enable = 1
+" Fix to let ESC work as espected with Autoclose plugin
+" (without this, when showing an autocompletion window, ESC won't leave insert
+"  mode)
+let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
 " Airline ------------------------------
 
@@ -403,13 +343,14 @@ let g:airline#extensions#whitespace#enabled = 0
 
 " to use fancy symbols for airline, uncomment the following lines and use a
 " patched font (more info on the README.rst)
-"if !exists('g:airline_symbols')
-"   let g:airline_symbols = {}
-"endif
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_symbols.branch = '⭠'
-"let g:airline_symbols.readonly = '⭤'
-"let g:airline_symbols.linenr = '⭡'
+if !exists('g:airline_symbols')
+   let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+
