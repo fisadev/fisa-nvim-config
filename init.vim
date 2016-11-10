@@ -76,6 +76,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/context_filetype.vim'
 " Python autocompletion
 Plug 'zchee/deoplete-jedi'
+" Just to add the python go-to-definition and similar features, autocompletion
+" from this plugin is disabled
+Plug 'davidhalter/jedi-vim'
 
 " Automatically close parenthesis, etc
 Plug 'Townk/vim-autoclose'
@@ -304,6 +307,10 @@ let g:deoplete#enable_smart_case = 1
 let g:context_filetype#same_filetypes = {}
 let g:context_filetype#same_filetypes._ = '_'
 
+" Jedi-vim ------------------------------
+
+let g:jedi#completions_enabled = 0
+
 " Ack.vim ------------------------------
 
 " mappings
@@ -358,4 +365,3 @@ let g:airline_right_alt_sep = '⮃'
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
-
