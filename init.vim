@@ -170,7 +170,6 @@ set completeopt+=noinsert
 " (displays documentation related to the selected completion option)
 set completeopt-=preview
 
-" TODO maybe remove?
 " autocompletion of files and commands behaves like shell
 " (complete only the common part, list the options that match)
 set wildmode=list:longest
