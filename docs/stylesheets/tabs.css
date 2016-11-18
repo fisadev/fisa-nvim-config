@@ -1,0 +1,8 @@
+.tab-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tab-link.inactive {
+    opacity: 0.4;
+}
