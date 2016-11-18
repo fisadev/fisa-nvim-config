@@ -94,7 +94,7 @@ Plug 'jeetsukumaran/vim-indentwise'
 
 " Ack code search (requires ack installed in the system)
 Plug 'mileszs/ack.vim'
-" TODO is there a better option for neovim?
+" TODO is there a way to prevent the progress which hides the editor?
 
 " Paint css colors with the real color
 Plug 'lilydjwg/colorizer'
@@ -120,7 +120,7 @@ Plug 'YankRing.vim'
 
 " Linters
 Plug 'neomake/neomake'
-" TODO run on save
+" TODO is it running on save? or when?
 " TODO not detecting errors, just style, is it using pylint? 
 
 " Relative numbering of lines (0 is the current line)
