@@ -32,7 +32,7 @@ endif
 
 " this needs to be here, so vim-plug knows we are declaring the plugins we
 " want to use
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Now the actual plugins:
 
