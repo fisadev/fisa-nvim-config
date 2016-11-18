@@ -311,6 +311,12 @@ highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
 "  mode)
 let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
+" Yankring -------------------------------
+
+" Fix for yankring and neovim problem when system has non-text things copied
+" in clipboard
+let g:yankring_clipboard_monitor=0
+
 " Airline ------------------------------
 
 let g:airline_powerline_fonts = 0
