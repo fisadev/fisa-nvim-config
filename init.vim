@@ -202,6 +202,9 @@ imap <M-Down> <ESC><c-w>j
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
 
+" clear search results
+nnoremap <silent> // :noh<CR>
+
 " ============================================================================
 " Plugins settings and mappings
 " Edit them as you wish.
