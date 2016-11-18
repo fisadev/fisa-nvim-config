@@ -10,3 +10,7 @@ Previous versions come from the original vim config: https://github.com/fisadev/
 * Beta 9.2
 
   * Small doc, links and website fixes.
+
+* Beta 9.3
+
+  * Small website and readme fixes.
