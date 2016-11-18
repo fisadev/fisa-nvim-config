@@ -25,15 +25,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="-79.131189"
-     inkscape:cy="582.836"
+     inkscape:cx="395.23758"
+     inkscape:cy="579.97886"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:window-height="1014"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
@@ -72,8 +72,8 @@
        x="329.13458"
        y="-201.85396"
        transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-xdpi="46.098938"
+       inkscape:export-ydpi="46.098938" />
     <rect
        style="fill:#afe9af;fill-opacity:1;stroke:none"
        id="rect3930-4"
@@ -82,28 +82,28 @@
        x="403.76257"
        y="-127.63001"
        transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-xdpi="46.098938"
+       inkscape:export-ydpi="46.098938" />
     <path
        style="opacity:0.61825729;fill:#ffffff;fill-opacity:1;stroke:none"
        d="M 375.46875 90 L 375.1875 90.28125 L 375.1875 511.9375 L 375.78125 511.9375 L 586.59375 301.125 L 375.46875 90 z "
        id="rect4003"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-xdpi="46.098938"
+       inkscape:export-ydpi="46.098938" />
     <text
        xml:space="preserve"
-       style="font-size:99.99999966px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:100px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none"
        x="385.77463"
        y="342.91684"
        id="text3121"
        sodipodi:linespacing="125%"
        transform="matrix(1.047007,0.00812463,-0.00741102,0.95504595,0,0)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+       inkscape:export-xdpi="46.098938"
+       inkscape:export-ydpi="46.098938"><tspan
          sodipodi:role="line"
          x="385.77463"
          y="342.91684"
-         id="tspan4007">vim</tspan></text>
+         id="tspan4007">neovim</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:100px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
@@ -112,8 +112,8 @@
        id="text3121-4"
        sodipodi:linespacing="125%"
        transform="matrix(1.047007,0.00812463,-0.00741102,0.95504595,0,0)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+       inkscape:export-xdpi="46.098938"
+       inkscape:export-ydpi="46.098938"><tspan
          sodipodi:role="line"
          x="379.42407"
          y="232.27307"
@@ -126,8 +126,8 @@
        id="text3121-3"
        sodipodi:linespacing="125%"
        transform="matrix(1.047007,0.00812463,-0.00741102,0.95504595,0,0)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
+       inkscape:export-xdpi="46.098938"
+       inkscape:export-ydpi="46.098938"><tspan
          sodipodi:role="line"
          x="383.52896"
          y="450.08441"
