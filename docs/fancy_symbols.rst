@@ -17,7 +17,7 @@ Now we need to install the patched font to our system. On Ubuntu, double click o
 
 **Configure**
 
-After installing the font, go to the settings of your terminal app and select the patched font. Finally, open your ``.vimrc`` and uncomment the lines at the end of the file, after the comment that explains that those are the lines for the fancy symbols.
+After installing the font, go to the settings of your terminal app and select the patched font. Finally, open your ``init.vim`` and uncomment the lines at the end of the file, after the comment that explains that those are the lines for the fancy symbols.
 
 That's it! Restart your vim and enjoy the beauty of Airline.
 
