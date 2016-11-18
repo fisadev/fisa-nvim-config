@@ -14,3 +14,8 @@ Previous versions come from the original vim config: https://github.com/fisadev/
 * Beta 9.3
 
   * Small website and readme fixes.
+
+* Beta 9.4
+
+  * Remove legacy CtrlP code.
+  * Fixed a problem of yankring and system clipboard non-text data.
