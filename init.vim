@@ -3,7 +3,7 @@
 " version: 9.0beta
 
 " TODO current problems:
-" * end key not working
+" * end key not working undef tmux+fish
 
 " ============================================================================
 " Vim-plug initialization
