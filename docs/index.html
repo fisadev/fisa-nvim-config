@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fisa-vim-config by fisadev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/tabs.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+  </head>
+  <body>
+    <section class="page-header">
+      <img src="images/logo/logo.png" />
+      <h2 class="project-tagline">a NeoVim configuration for the modern pythonista (plus some other goodies)</h2>
+      <a href="https://github.com/fisadev/fisa-nvim-config" class="btn">View on GitHub</a>
+      <a href="https://raw.github.com/fisadev/fisa-nvim-config/master/init.vim" class="btn">Download init.vim</a>
+    </section>
+
+    <section class="main-content">
+      <iframe src="https://ghbtns.com/github-btn.html?user=fisadev&repo=fisa-nvim-config&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=fisadev&repo=fisa-nvim-config&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <p>
+        This is my personal NeoVim configuration, built according to my personal preferences, without any justification to think it's the best possible vim configuration. 
+        If you like it, great! :) It's mainly oriented to python software development, but many of its features are useful for other languages and editing tasks.
+      </p>
+      <p>
+        Not using Neovim? Try it! It's stable enough, and has some advantages over the classic vim.
+      </p>
+      <p>
+        Some of the best features (<a href="https://github.com/fisadev/fisa-nvim-config/blob/master/docs/features.rst">full list here</a>):
+      </p>
+      <p>
+        <img src="images/demo.gif" alt="Demo" />
+      </p>
+
+      <h1><a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><span id="tab-link-install" class="tab-link">Install</span> | <span id="tab-link-upgrade" class="tab-link">Upgrade</span></h1>
+      <div id="tab-install" class="tab">
+        <p>
+          <strong>0)</strong> You will need <a href="">NeoVim</a>. For Ubuntu users, this is enough:
+        </p>
+        <pre>
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim</pre>
+        <p>
+          Also, your <code>.config/nvim</code> folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
+        </p>
+        <p>
+          <strong>1)</strong> Install the required dependencies:
+        </p>
+          <pre>
+sudo apt-get install python-dev python-pip python3-dev python3-pip curl vim exuberant-ctags git ack-grep
+sudo pip install neovim pep8 flake8 pyflakes isort
+sudo pip3 install neovim</pre>
+        </p>
+        <p>
+          <strong>2)</strong> Download the <a href="https://raw.github.com/fisadev/fisa-nvim-config/master/init.vim"><code>init.vim</code></a> file and place it under <code>~/.config/nvim/</code>.
+        </p>
+        <p>
+          <strong>3)</strong> Open NeoVim (<code>nvim</code> command) and it will continue the installation by itself.
+          Wait for it to finish...
+          and done! You now have your new shiny powerful NeoVim :)
+        </p>
+        <p>
+          <strong>Optional:</strong> If you want fancy symbols and breadcrumbs on your status line, check <a href="https://github.com/fisadev/fisa-nvim-config/blob/master/docs/fancy_symbols.rst">this small tutorial</a>.
+        </p>
+        <!--<p>
+          <strong>Docker:</strong> Federico Gonzalez (<a href="https://github.com/fedeg">FedeG</a>) made a docker image which runs vim with this config inside, you can find it <a href="https://fedeg.github.io/python-vim/">here</a> or in <a href="https://hub.docker.com/r/fedeg/python-vim/">docker hub</a>.
+        </p>-->
+      </div>
+
+      <div id="tab-upgrade" class="tab">
+        <p>
+          If you come from an older version of fisa-nvim-config and want to upgrade it to the latest release, follow these steps:
+        </p>
+        <p>
+          <strong>1)</strong> Dowload the new version of the <code>init.vim</code> file and replace the old one you have.
+        </p>
+        <p>
+          <strong>2)</strong> Install the dependencies listed in the install section.
+        </p>
+        <p>
+          <strong>3)</strong> Open NeoVim and run:
+        </p>
+        <pre>
+:PlugClean 
+:PlugInstall
+:PlugUpdate
+:UpdateRemotePlugins</pre>
+        <p>
+          This will remove plugins no longer used, install any new plugins, and update the existing ones to the last versions. 
+          It can be useful to look at the <a href="https://github.com/fisadev/fisa-nvim-config/blob/master/docs/changelog.rst">changelog</a>.
+        </p>
+      </div>
+
+      <footer class="site-footer">
+        <span>
+          Fisa-vim-config is maintained by <a href="https://github.com/fisadev">fisadev</a>, but it exists thanks to the work of lots of other people, a small list is <a href="https://github.com/fisadev/fisa-nvim-config/blob/master/docs/acknowledgements.rst">here</a>.
+        </span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+    <script>
+        function tabLinkOnClick(e) {
+            var activeLink = $(e.target);
+            var activeTab = $('#' + activeLink.attr('id').replace('-link', ''));
+
+            $('.tab').not(activeTab).hide();
+            activeTab.fadeIn();
+
+            activeLink.removeClass('inactive');
+            $('.tab-link').not(activeLink).addClass('inactive');
+        }
+        $(function() {
+            $('.tab-link').click(tabLinkOnClick);
+            $('#tab-link-install').click();
+        });
+    </script>
+
+  </body>
+</html>
