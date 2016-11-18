@@ -1,6 +1,6 @@
 " Fisa-nvim-config
 " http://nvim.fisadev.com
-" version: 9.2beta
+" version: 9.3 beta
 
 " TODO current problems:
 " * end key not working undef tmux+fish
