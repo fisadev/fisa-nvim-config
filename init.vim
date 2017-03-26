@@ -190,6 +190,9 @@ set scrolloff=3
 " clear search results
 nnoremap <silent> // :noh<CR>
 
+" clear empty spaces at the end of lines on save of python files
+autocmd BufWritePre *.py :%s/\s\+$//e
+
 " ============================================================================
 " Plugins settings and mappings
 " Edit them as you wish.
