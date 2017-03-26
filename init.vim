@@ -36,7 +36,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Now the actual plugins:
 
-" Override configs by directory 
+" Override configs by directory
 Plug 'arielrossanigo/dir-configs-override.vim'
 
 " Code commenter
@@ -121,12 +121,12 @@ Plug 'YankRing.vim'
 " Linters
 Plug 'neomake/neomake'
 " TODO is it running on save? or when?
-" TODO not detecting errors, just style, is it using pylint? 
+" TODO not detecting errors, just style, is it using pylint?
 
 " Relative numbering of lines (0 is the current line)
 " (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative 
-" numbering every time you go to normal mode. Author refuses to add a setting 
+" on/off. When the plugin is present, will always activate the relative
+" numbering every time you go to normal mode. Author refuses to add a setting
 " to avoid that)
 Plug 'myusuf3/numbers.vim'
 
@@ -194,14 +194,14 @@ nnoremap <silent> // :noh<CR>
 " Plugins settings and mappings
 " Edit them as you wish.
 
-" Tagbar ----------------------------- 
+" Tagbar -----------------------------
 
 " toggle tagbar display
 map <F4> :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
 
-" NERDTree ----------------------------- 
+" NERDTree -----------------------------
 
 " toggle nerdtree display
 map <F3> :NERDTreeToggle<CR>
