@@ -43,12 +43,15 @@
       <h1><a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><span id="tab-link-install" class="tab-link">Install</span> | <span id="tab-link-upgrade" class="tab-link">Upgrade</span></h1>
       <div id="tab-install" class="tab">
         <p>
-          <strong>0)</strong> You will need <a href="https://neovim.io/">NeoVim</a>. For Ubuntu users, this is enough:
+          <strong>0)</strong> You will need <a href="https://neovim.io/">NeoVim</a>. For Ubuntu 16.04 users, this is enough:
         </p>
         <pre>
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim</pre>
+        <p>
+            For other linux distros or Ubuntu versions, I suggest you get a stable NeoVim (you may need to compile it), which is currently v0.17.x.
+        </p>
         <p>
           Also, your <code>.config/nvim</code> folder should be empty. If you have one, rename it or move to a different location (to keep a backup, just in case you want to go back).
         </p>
