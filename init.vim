@@ -51,7 +51,7 @@ Plug 'majutsushi/tagbar'
 " * current block not refreshing
 
 " Search results counter
-Plug 'IndexedSearch'
+Plug 'vim-scripts/IndexedSearch'
 
 " Terminal Vim with 256 colors colorscheme
 Plug 'fisadev/fisa-vim-colorscheme'
@@ -92,6 +92,9 @@ Plug 'michaeljsmith/vim-indent-object'
 " Indentation based movements
 Plug 'jeetsukumaran/vim-indentwise'
 
+" Better language packs
+Plug 'sheerun/vim-polyglot'
+
 " Ack code search (requires ack installed in the system)
 Plug 'mileszs/ack.vim'
 " TODO is there a way to prevent the progress which hides the editor?
@@ -109,6 +112,9 @@ Plug 'fisadev/vim-isort'
 " Highlight matching html tags
 Plug 'valloric/MatchTagAlways'
 
+" Generate html in a simple way
+Plug 'mattn/emmet-vim'
+
 " Git integration
 Plug 'tpope/vim-fugitive'
 
@@ -116,7 +122,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
 " Yank history navigation
-Plug 'YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 
 " Linters
 Plug 'neomake/neomake'
@@ -318,7 +324,8 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
 " Fix for yankring and neovim problem when system has non-text things copied
 " in clipboard
-let g:yankring_clipboard_monitor=0
+let g:yankring_clipboard_monitor = 0
+let g:yankring_history_dir = '~/.config/nvim/'
 
 " Airline ------------------------------
 
