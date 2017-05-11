@@ -92,6 +92,9 @@ Plug 'michaeljsmith/vim-indent-object'
 " Indentation based movements
 Plug 'jeetsukumaran/vim-indentwise'
 
+" Better language packs
+Plug 'sheerun/vim-polyglot'
+
 " Ack code search (requires ack installed in the system)
 Plug 'mileszs/ack.vim'
 " TODO is there a way to prevent the progress which hides the editor?
