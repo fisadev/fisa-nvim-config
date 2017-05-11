@@ -112,6 +112,9 @@ Plug 'fisadev/vim-isort'
 " Highlight matching html tags
 Plug 'valloric/MatchTagAlways'
 
+" Generate html in a simple way
+Plug 'mattn/emmet-vim'
+
 " Git integration
 Plug 'tpope/vim-fugitive'
 
