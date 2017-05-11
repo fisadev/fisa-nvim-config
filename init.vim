@@ -51,7 +51,7 @@ Plug 'majutsushi/tagbar'
 " * current block not refreshing
 
 " Search results counter
-Plug 'IndexedSearch'
+Plug 'vim-scripts/IndexedSearch'
 
 " Terminal Vim with 256 colors colorscheme
 Plug 'fisadev/fisa-vim-colorscheme'
@@ -122,7 +122,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
 " Yank history navigation
-Plug 'YankRing.vim'
+Plug 'vim-scripts/YankRing.vim'
 
 " Linters
 Plug 'neomake/neomake'
