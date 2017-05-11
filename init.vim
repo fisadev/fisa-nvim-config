@@ -325,7 +325,7 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 " Fix for yankring and neovim problem when system has non-text things copied
 " in clipboard
 let g:yankring_clipboard_monitor = 0
-let g:yankring_history_dir = '~/.config/nvim/yankring_history_v2.txt'
+let g:yankring_history_dir = '~/.config/nvim/'
 
 " Airline ------------------------------
 
