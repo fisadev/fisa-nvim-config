@@ -19,3 +19,10 @@ Previous versions come from the original vim config: https://github.com/fisadev/
 
   * Remove legacy CtrlP code.
   * Fixed a problem of yankring and system clipboard non-text data.
+
+* Beta 9.5
+
+  * Added vim-polyglot plugin.
+  * The emmet-vim plugin is back.
+  * Changed the location of the YankRing.vim plugin's history file.
+  * Updated Plug paths pointing to vim-scripts (old way of just the plugin name is deprecated).
