@@ -26,3 +26,10 @@ Previous versions come from the original vim config: https://github.com/fisadev/
   * The emmet-vim plugin is back.
   * Changed the location of the YankRing.vim plugin's history file.
   * Updated Plug paths pointing to vim-scripts (old way of just the plugin name is deprecated).
+
+* 10.0
+
+  * Finally out of beta!
+  * Code checks assume python3 by default (you can comment the settings after "Check code as python3 by default").
+  * Fixed issues with using other shells that aren't bash.
+  * Nicer vertical line separator.

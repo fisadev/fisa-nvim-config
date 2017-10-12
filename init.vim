@@ -1,6 +1,6 @@
 " Fisa-nvim-config
 " http://nvim.fisadev.com
-" version: 9.5 beta
+" version: 10.0
 
 " TODO current problems:
 " * end key not working undef tmux+fish
@@ -162,6 +162,9 @@ set shiftwidth=4
 " show line numbers
 set nu
 
+" remove ugly vertical lines on window division
+set fillchars+=vert:\ 
+
 " use 256 colors when possible
 if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
 	let &t_Co = 256
@@ -199,6 +202,10 @@ nnoremap <silent> // :noh<CR>
 " clear empty spaces at the end of lines on save of python files
 autocmd BufWritePre *.py :%s/\s\+$//e
 
+" fix problems with uncommon shells (fish, xonsh) and plugins running commands
+" (neomake, ...)
+set shell=/bin/bash 
+
 " ============================================================================
 " Plugins settings and mappings
 " Edit them as you wish.
@@ -228,6 +235,12 @@ map <F2> :TaskList<CR>
 
 " Run linter on write
 autocmd! BufWritePost * Neomake
+
+" Check code as python3 by default
+let g:neomake_python_python_maker = neomake#makers#ft#python#python()
+let g:neomake_python_flake8_maker = neomake#makers#ft#python#flake8()
+let g:neomake_python_python_maker.exe = 'python3 -m py_compile'
+let g:neomake_python_flake8_maker.exe = 'python3 -m flake8'
 
 " Fzf ------------------------------
 
