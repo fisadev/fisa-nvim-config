@@ -162,6 +162,9 @@ set shiftwidth=4
 " show line numbers
 set nu
 
+" remove ugly vertical lines on window division
+set fillchars+=vert:\ 
+
 " use 256 colors when possible
 if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
 	let &t_Co = 256
