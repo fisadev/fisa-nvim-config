@@ -249,7 +249,7 @@ nmap ,e :Files<CR>
 " tags (symbols) in current file finder mapping
 nmap ,g :BTag<CR>
 " tags (symbols) in all files finder mapping
-nmap ,G :Tag<CR>
+nmap ,G :Tags<CR>
 " general code finder in current file mapping
 nmap ,f :BLines<CR>
 " general code finder in all files mapping
