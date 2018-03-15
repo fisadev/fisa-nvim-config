@@ -358,3 +358,11 @@ let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
+
+
+" Custom configurations ----------------
+
+" Include user's custom nvim configurations
+if filereadable(expand("~/.config/nvim/custom.vim"))
+  source ~/.config/nvim/custom.vim
+endif
