@@ -7,7 +7,7 @@
 
 " ============================================================================
 " Vim-plug initialization
-" Avoid modify this section, unless you are very sure of what you are doing
+" Avoid modifying this section, unless you are very sure of what you are doing
 
 let vim_plug_just_installed = 0
 let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
