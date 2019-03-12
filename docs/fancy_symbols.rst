@@ -1,23 +1,17 @@
-Fancy symbols and breadcrumbs in the status line
-------------------------------------------------
+Fancy symbols
+-------------
 
-Airline allows you to use fancy symbols on the status line for breadcrumbs and indicators (example: a padlock when editing read-only files). Using them requires to have a patched font in your terminal. It may sound black magic, but in fact is quite easy.
+Airline allows you to use fancy symbols on the status line for breadcrumbs and indicators (example: a padlock when editing read-only files). And vim-devicons also has fancy symbols for the files in NERDTree (the file explorer), like a python logo for python files, etc. Using them requires having a patched font in your terminal. It may sound like black magic, but it's just downloading, installing and using a font from this website:
 
-**Get the font patcher and dependencies**
+`Nerd Fonts <https://github.com/ryanoasis/nerd-fonts#patched-fonts>`_
 
-Grab the ``fontpatcher`` directory from this repo to some location on your computer (the patcher was written by Kim Silkebækken, the author of the original vim-powerline plugin). Then install the ``argparse`` and ``fontforge`` dependencies: in Ubuntu you only need to run ``sudo apt-get install python-fontforge``. In other distros there should be packages with similar names.
-
-**Patch**
-
-We will need to patch a font. Pick the font you want to patch (it should be a monospace font). Copy its .ttf file (on Ubuntu you can find them under ``/usr/share/fonts/truetype/``) to the ``fontpatcher`` folder. Cd into that folder and run ``./fontpatcher YOURFONTFILE.ttf``. Now you will have a file named ``YOURFONTFILE-Powerline.ttf``, that's your patched font.
-
-**Install**
-
-Now we need to install the patched font to our system. On Ubuntu, double click on the font file and choose "install". On other systems copy the font file to the ``YOURHOMEFOLDER/.fonts/`` folder and then run ``sudo fc-cache -vf``.
+I recommend just manually downloading the one you like the most from `this list <https://github.com/ryanoasis/nerd-fonts#patched-fonts>`_.
 
 **Configure**
 
-After installing the font, go to the settings of your terminal app and select the patched font. Finally, open your ``init.vim`` and uncomment the lines at the end of the file, after the comment that explains that those are the lines for the fancy symbols.
+After installing the font, go to the settings of your terminal app and select the patched font. Finally, open your ``init.vim`` and uncomment:
 
-That's it! Restart your vim and enjoy the beauty of Airline.
+- the line declaring the vim-devicons plugin (search for "Nice icons")
+- the lines at the end of the file, after the comment that explains that those are the lines for the fancy symbols.
 
+That's it! Restart your vim and enjoy the beauty of a modern terminal :D
