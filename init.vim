@@ -136,7 +136,8 @@ Plug 'neomake/neomake'
 " to avoid that)
 Plug 'myusuf3/numbers.vim'
 
-
+" Nice icons
+Plug 'ryanoasis/vim-devicons'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
