@@ -7,7 +7,7 @@
 
 " ============================================================================
 " Vim-plug initialization
-" Avoid modify this section, unless you are very sure of what you are doing
+" Avoid modifying this section, unless you are very sure of what you are doing
 
 let vim_plug_just_installed = 0
 let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
@@ -254,7 +254,7 @@ nmap ,e :Files<CR>
 " tags (symbols) in current file finder mapping
 nmap ,g :BTag<CR>
 " tags (symbols) in all files finder mapping
-nmap ,G :Tag<CR>
+nmap ,G :Tags<CR>
 " general code finder in current file mapping
 nmap ,f :BLines<CR>
 " general code finder in all files mapping
@@ -363,3 +363,11 @@ let g:airline#extensions#whitespace#enabled = 0
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
+
+
+" Custom configurations ----------------
+
+" Include user's custom nvim configurations
+if filereadable(expand("~/.config/nvim/custom.vim"))
+  source ~/.config/nvim/custom.vim
+endif
