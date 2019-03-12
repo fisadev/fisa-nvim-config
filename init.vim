@@ -136,7 +136,8 @@ Plug 'neomake/neomake'
 " to avoid that)
 Plug 'myusuf3/numbers.vim'
 
-
+" Nice icons
+" Plug 'ryanoasis/vim-devicons'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -205,6 +206,10 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " fix problems with uncommon shells (fish, xonsh) and plugins running commands
 " (neomake, ...)
 set shell=/bin/bash 
+
+" Ability to add python breakpoints
+" (I use ipdb, but you can change it to whatever tool you use for debugging)
+au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
 
 " ============================================================================
 " Plugins settings and mappings
