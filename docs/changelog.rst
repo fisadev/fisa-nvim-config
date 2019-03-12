@@ -5,9 +5,11 @@ Changelog
 
   * Mapping to add python breakpoints with ipdb (but easily configurable to something else).
   * Added optional nice file icons.
+  * Load custom configs at the end of the file, if present.
   * Fancy symbols tutorial now points to Nerd Fonts, far easier.
   * Installation now recommends using an appimage release.
   * Changelog inverted, easier to read :D
+  * Docker image should now be available.
 
 * 10.0
 
