@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+* 11.1
+
+  * Disable annoying inline error messages from neomake (the ones appearing next to the code lines)
+
 * 11.0
 
   * Mapping to add python breakpoints with ipdb (but easily configurable to something else).
