@@ -61,9 +61,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Code and files fuzzy finder
-" Plug 'ctrlpvim/ctrlp.vim'
-" Extension to ctrlp, for fuzzy command finder
-" Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -264,20 +261,6 @@ nmap ,f :BLines<CR>
 nmap ,F :Lines<CR>
 " commands finder mapping
 nmap ,c :Commands<CR>
-" to be able to call CtrlP with default search text
-"function! CtrlPWithSearchText(search_text, ctrlp_command_end)
-    "execute ':CtrlP' . a:ctrlp_command_end
-    "call feedkeys(a:search_text)
-"endfunction
-" same as previous mappings, but calling with current word as default text
-"nmap ,wg :call CtrlPWithSearchText(expand('<cword>'), 'BufTag')<CR>
-"nmap ,wG :call CtrlPWithSearchText(expand('<cword>'), 'BufTagAll')<CR>
-"nmap ,wf :call CtrlPWithSearchText(expand('<cword>'), 'Line')<CR>
-"nmap ,we :call CtrlPWithSearchText(expand('<cword>'), '')<CR>
-"nmap ,pe :call CtrlPWithSearchText(expand('<cfile>'), '')<CR>
-"nmap ,wm :call CtrlPWithSearchText(expand('<cword>'), 'MRUFiles')<CR>
-"nmap ,wc :call CtrlPWithSearchText(expand('<cword>'), 'CmdPalette')<CR>
-
 
 " Deoplete -----------------------------
 
@@ -357,16 +340,15 @@ let g:airline#extensions#whitespace#enabled = 0
 " to use fancy symbols for airline, uncomment the following lines and use a
 " patched font (more info on docs/fancy_symbols.rst)
 "if !exists('g:airline_symbols')
-   "let g:airline_symbols = {}
+"   let g:airline_symbols = {}
 "endif
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
 "let g:airline_symbols.branch = '⭠'
 "let g:airline_symbols.readonly = '⭤'
 "let g:airline_symbols.linenr = '⭡'
-
 
 " Custom configurations ----------------
 

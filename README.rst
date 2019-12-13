@@ -1,7 +1,9 @@
 fisa-nvim-config
 ================
 
-A NeoVim configuration for the modern pythonista (plus some other goodies)
+**THIS REPO IS DEPRECATED!!!**
 
-Installation instructions and docs `here <http://nvim.fisadev.com>`_.
+This was my old NeoVim configuration, but it was now merged into my Vim config.
+The merged config works both in Vim and NeoVim. 
 
+Head to `vim.fisadev.com <http://vim.fisade.com>`_ to get the current version :)
